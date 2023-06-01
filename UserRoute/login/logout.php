@@ -4,4 +4,4 @@ $_SESSION = array();
 
 session_destroy();
 
-header("location: login_form.php");
+header("location: ../LP/Lppage.php");

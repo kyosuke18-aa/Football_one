@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function(){
 	// タブをクリックすると実行する関数
 	function tabSwitch(){
 		// 引数で指定したセレクターと一致する直近の祖先要素を取得
-		const ancestorEle = this.closest('.tab-panel');
+		const ancestorEle = this.closest('.tabs');
 		// タブのclassの値を変更
 		ancestorEle.getElementsByClassName('is-active')[0].classList.remove('is-active');
 		this.classList.add('is-active');

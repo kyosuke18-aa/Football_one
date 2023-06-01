@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>ログイン画面</title>
     <link rel="stylesheet" href="../css/login_form.css">
 </head>
 
@@ -24,6 +24,7 @@
             </form>
 
             <p><a href="../register/register_form.php">アカウント作成の方はこちら</a></p>
+            <!-- <p><a href="../../admin/home/home.php">今だけ,管理者ページ</a></p> -->
         </div>
 
     </div>

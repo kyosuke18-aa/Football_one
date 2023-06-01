@@ -1,13 +1,13 @@
 <?php
 // DB接続するためのファイル読み込み
-require("/Applications/MAMP/htdocs/sinki/functions/db_connect.php");
+require("../../function/db_connect.php");
 
 // ＄dbに関数を代入
-$db = connect();
+$pdo = connect();
 
 
 // // sqlを定義
-$sql = ("INSERT INTO test (name,email,password) VALUES (:name,:email,:password)");
+$sql = ("INSERT INTO user (name,email,password) VALUES (:name,:email,:password)");
 
 
 // // フォームの値を受け取る
@@ -18,7 +18,7 @@ $hashPass = password_hash($password,PASSWORD_DEFAULT);
 
 
 // SQLの発行
-$stmt = $db->prepare($sql);
+$stmt = $pdo->prepare($sql);
 $stmt->bindParam(':name', $name,PDO::PARAM_STR);
 $stmt->bindParam(':email', $email,PDO::PARAM_STR);
 $stmt->bindParam(':password', $hashPass,PDO::PARAM_STR);
@@ -28,19 +28,18 @@ $stmt->bindParam(':password', $hashPass,PDO::PARAM_STR);
 $user = $stmt->execute();
 
 // チケットのカラム値を更新
-if($user){
-    $name = filter_input(INPUT_POST,"name");
+// if($user){
+//     $name = filter_input(INPUT_POST,"name");
 
-    $pdo = new PDO('mysql:host=localhost;dbname=tests;','root','root',[ PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC ]);
-    $sql = ("UPDATE test SET ticket = 3 WHERE name = :name");
-    $stmt = $pdo->prepare($sql);
+//     // $pdo = new PDO('mysql:host=localhost;dbname=tests;','root','root',[ PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC ]);
+//     $sql = ("UPDATE user SET ticket = 3 WHERE name = :name");
+//     $stmt = $pdo->prepare($sql);
+//     $stmt->bindParam(":name", $name,PDO::PARAM_STR);
+//     $stmt->execute();
 
-    $stmt->bindParam(":name", $name,PDO::PARAM_STR);
-    $stmt->execute();
-
-}else{
-    echo "update構文失敗";
-}
+// }else{
+//     echo "update構文失敗";
+// }
 
 ?>
 

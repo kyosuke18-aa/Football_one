@@ -1,0 +1,25 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.iframely-embed{
+    width: 20%;
+    height: 20vh;
+}
+
+.all{
+    background-color: black;
+    width: 50%;
+    height: 50vh;
+    display: flex;
+}
+
+.one{
+    background-color: aqua;
+    width: 50%;
+}
+.two{
+    background-color: blue;
+    width: 50%;
+}

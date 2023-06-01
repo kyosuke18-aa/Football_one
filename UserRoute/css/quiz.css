@@ -1,23 +1,26 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: none;
+    font-family: 'Ubuntu', sans-serif;
 }
-.body{
+
+.body {
     width: 100%;
     height: 100vh;
-    position: absolute;
-    background-color: #222426;
+    /* background: url("../img/wrodwupstujiam.webp"); */
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .header {
-    background: #00000082;
     display: flex;
     padding: 20px;
     /* color: white; */
     border-top: 5px solid rgb(211, 209, 209);
     border-bottom: 7px solid rgb(211, 209, 209);
-    background-position: right;
+    /* background: url("../../UserRoute/img/フリー画像.jpeg"); */
+    /* background-position: right; */
     background: linear-gradient(to right, rgb(221, 70, 88), rgb(107, 53, 225));
 }
 
@@ -33,32 +36,11 @@
 
 .header-list ul {
     display: flex;
-    font-weight: bolder;
 }
 
 .header-list ul li {
     list-style: none;
+    font-weight: bolder;
     margin-left: 2.0rem;
     line-height: 100px;
-}
-
-.header-list ul li a {
-    text-decoration: none;
-    transition: 0.3s all;
-}
-
-.header-list ul li a:hover {
-    color: rgb(138, 171, 243);
-    border-bottom: 4px solid rgb(138, 171, 243);
-}
-
-.score{
-    background: #fff;
-    width: 40%;
-    padding: 30px;
-    border-radius: 30px;
-    position: relative;
-    top: 20%;
-    left: 10%;
-    border: 3px solid black;
 }
